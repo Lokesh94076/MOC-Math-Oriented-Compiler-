@@ -1,0 +1,14 @@
+[
+    {
+        "command": "gcc -o src/server.o -c -O2 -Wall -Iinclude src/server.c",
+        "directory": "/home/ooh/Projects/MOC",
+        "file": "src/server.c",
+        "output": "src/server.o"
+    },
+    {
+        "command": "gcc -o include/listen.o -c -O2 -Wall -Iinclude include/listen.c",
+        "directory": "/home/ooh/Projects/MOC",
+        "file": "include/listen.c",
+        "output": "include/listen.o"
+    }
+]
