@@ -23,12 +23,21 @@
             <mxPoint x="25" as="offset" />
           </mxGeometry>
         </mxCell>
+<<<<<<< HEAD
         <mxCell id="f3RW_dcl9wstU-gMcRCD-92" edge="1" parent="1" source="f3RW_dcl9wstU-gMcRCD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" target="f3RW_dcl9wstU-gMcRCD-88">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="f3RW_dcl9wstU-gMcRCD-98" connectable="0" parent="f3RW_dcl9wstU-gMcRCD-92" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="request" vertex="1">
           <mxGeometry relative="1" x="0.5455" y="1" as="geometry">
             <mxPoint as="offset" />
+=======
+        <mxCell id="f3RW_dcl9wstU-gMcRCD-104" edge="1" parent="1" source="f3RW_dcl9wstU-gMcRCD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" target="f3RW_dcl9wstU-gMcRCD-100">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="220" />
+              <mxPoint x="555" y="220" />
+            </Array>
+>>>>>>> 6be4e7c (creating listener)
           </mxGeometry>
         </mxCell>
         <mxCell id="f3RW_dcl9wstU-gMcRCD-14" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;labelBackgroundColor=none;rounded=1;" value="Language local wrapper" vertex="1">
@@ -138,12 +147,26 @@
           <mxGeometry height="590" width="730" x="210" y="230" as="geometry" />
         </mxCell>
         <mxCell id="f3RW_dcl9wstU-gMcRCD-88" parent="f3RW_dcl9wstU-gMcRCD-69" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="C Runtime - looks for request, generates new source for itself if not updated and returns answer, anyone can request" vertex="1">
+<<<<<<< HEAD
           <mxGeometry height="40" width="610" x="50" y="184" as="geometry" />
+=======
+          <mxGeometry height="40" width="610" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="f3RW_dcl9wstU-gMcRCD-103" edge="1" parent="f3RW_dcl9wstU-gMcRCD-69" source="f3RW_dcl9wstU-gMcRCD-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="f3RW_dcl9wstU-gMcRCD-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3RW_dcl9wstU-gMcRCD-100" parent="f3RW_dcl9wstU-gMcRCD-69" style="rounded=1;whiteSpace=wrap;html=1;" value="Queue" vertex="1">
+          <mxGeometry height="30" width="200" x="245" y="50" as="geometry" />
+>>>>>>> 6be4e7c (creating listener)
         </mxCell>
         <mxCell id="f3RW_dcl9wstU-gMcRCD-91" edge="1" parent="1" source="f3RW_dcl9wstU-gMcRCD-88" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;" target="f3RW_dcl9wstU-gMcRCD-27">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
+<<<<<<< HEAD
               <mxPoint x="413" y="480" />
+=======
+              <mxPoint x="402" y="480" />
+>>>>>>> 6be4e7c (creating listener)
               <mxPoint x="465" y="480" />
               <mxPoint x="465" y="560" />
             </Array>

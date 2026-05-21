@@ -1,5 +1,4 @@
-import main
+from src.python_wrapper import MOC as moc
 
-file = "/home/ooh/Projects/MOC/maths/basic.math"
 
-print(main.get(file, "square", 25))
+moc.send("@moc_socket")
