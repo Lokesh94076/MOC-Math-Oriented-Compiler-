@@ -10,5 +10,11 @@
         "directory": "/home/ooh/Projects/MOC",
         "file": "include/listen.c",
         "output": "include/listen.o"
+    },
+    {
+        "command": "gcc -o include/parser.o -c -O2 -Wall -Iinclude include/parser.c",
+        "directory": "/home/ooh/Projects/MOC",
+        "file": "include/parser.c",
+        "output": "include/parser.o"
     }
 ]
