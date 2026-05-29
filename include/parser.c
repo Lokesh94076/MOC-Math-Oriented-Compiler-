@@ -8,15 +8,13 @@ struct fuc {
     char function_name[128];
     char argument[128]; // Kept your original spelling
     char expression[512];
-    char generated[4096];
 };
 
 int generate(char *func_name, char *argu, char *exp){
     printf("function_name: %s\n", func_name);
     printf("argument_name: %s\n", argu);
-    printf("expression_name: %s\n", exp);
-
-    
+    printf("expression_name: %s\n\n", exp);
+    return 0;
 }
 
 int parse(int message_size, char *recieved_msg, char **parsed_result) {
@@ -95,4 +93,3 @@ int parse(int message_size, char *recieved_msg, char **parsed_result) {
     }
     return 0;
 }
-
