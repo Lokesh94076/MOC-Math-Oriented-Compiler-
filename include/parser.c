@@ -6,24 +6,43 @@
 
 struct fuc {
     char function_name[128];
-    char argument[128]; // Kept your original spelling
+    char argument[128];
     char expression[512];
 };
 
 int generate(char *func_name, char *argu, char *exp){
+    
     printf("function_name: %s\n", func_name);
     printf("argument_name: %s\n", argu);
     printf("expression_name: %s\n\n", exp);
+    
+    FILE *fptr;
+    
+    fptr = fopen("gen/gen.c", "a");
+    if (fptr == NULL) {
+        printf("Error: Could not open file.\n");
+        return 1;
+    }
+
+    fprintf(fptr, "double %s(%s){return %s;}\n", func_name, argu, exp);
+    fclose(fptr);
+    
     return 0;
 }
 
-int parse(int message_size, char *recieved_msg, char **parsed_result) {
-    struct fuc functions = {0};
+int parse(int message_size, char *recieved_msg) {
+    // clear the file from last attempt
+    FILE *fptr;
+    fptr = fopen("gen/gen.c", "w");
+    fprintf(fptr, "");
+    fclose(fptr);
     
+    struct fuc functions = {0};
+    const char *command = "gcc gen/gen.c -o gen/output --shared";
+    bool passed_argument = false;
     bool passed_equal = false;
     int function_name_counter = 0;
     int arguement_counter = 0;
-    bool passed_argument = false;
     int expression_counter = 0;
     
     for (int i = 0; i < message_size; i++) {
@@ -91,5 +110,6 @@ int parse(int message_size, char *recieved_msg, char **parsed_result) {
         }
         
     }
+    system(command);
     return 0;
 }

@@ -16,8 +16,10 @@ int main() {
 
             
             // Main logic
-            parse(message_size, received_message, &generated_code); //parse and generate code
-
+            parse(message_size, received_message); //parse and generate code
+            
+            
+            
             free(received_message); // Free received message memory
             generated_code = NULL;
             received_message = NULL; // Reset for the next run
