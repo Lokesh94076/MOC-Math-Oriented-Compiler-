@@ -3,6 +3,7 @@
 #include <listen.h>
 #include <stdbool.h>
 #include <parser.h>
+#include <dlfcn.h>
 
 int main() {
     // Create vars
@@ -16,8 +17,29 @@ int main() {
 
             
             // Main logic
-            parse(message_size, received_message, &generated_code); //parse and generate code
+            parse(message_size, received_message); //parse and generate code
+            
+            void *lib = dlopen("gen/generated.so", RTLD_LAZY);
+            
+            if (!lib)
+            {
+                printf("dlopen failed: %s\n", dlerror());
+                return 1;
+            }
+            double (*square)(double);
+            square = (double (*)(double)) dlsym(lib, "square");
+            if (!square)
+            {
+                printf("dlsym failed: %s\n", dlerror());
+                dlclose(lib);
+                return 1;
+            }
 
+            double result = square(5);
+            printf("Result: %f\n", result);
+            dlclose(lib);
+
+            
             free(received_message); // Free received message memory
             generated_code = NULL;
             received_message = NULL; // Reset for the next run
