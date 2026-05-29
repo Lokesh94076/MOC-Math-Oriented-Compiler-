@@ -38,7 +38,7 @@ int parse(int message_size, char *recieved_msg) {
     fclose(fptr);
     
     struct fuc functions = {0};
-    const char *command = "gcc gen/gen.c -o gen/output --shared";
+    const char *command = "gcc -shared -fPIC gen/gen.c -o gen/generated.so";
     bool passed_argument = false;
     bool passed_equal = false;
     int function_name_counter = 0;

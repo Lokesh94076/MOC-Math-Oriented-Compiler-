@@ -1,3 +1,4 @@
-square(double x, double y)=x*y
+square(double x)=x*x*x
 add(double x)=x+x
 sub(double x)=x-x
+ 

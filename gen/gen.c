@@ -1,3 +1,3 @@
-double square(double x, double y){return x*y;}
+double square(double x){return x*x*x;}
 double add(double x){return x+x;}
 double sub(double x){return x-x;}
